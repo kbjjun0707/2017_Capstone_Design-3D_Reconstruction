@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewerClass</class>
+ <widget class="QMainWindow" name="ViewerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>888</width>
+    <height>629</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>888</width>
+    <height>629</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>3D Scanner</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
+      <item>
+       <widget class="FileRender" name="openGLWidget"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,0,0">
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QToolButton" name="tbtn_dir">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_render">
+          <property name="text">
+           <string>render</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>888</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="menuBack"/>
+    <addaction name="separator"/>
+    <addaction name="menuQuit"/>
+   </widget>
+   <widget class="QMenu" name="menutools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="menuViewbox"/>
+    <addaction name="menuColor"/>
+    <addaction name="separator"/>
+    <addaction name="menuOption"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menutools"/>
+  </widget>
+  <action name="menuBack">
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </action>
+  <action name="menuQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="menuColor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="menuOption">
+   <property name="text">
+    <string>Option</string>
+   </property>
+  </action>
+  <action name="menuViewbox">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>View Box</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FileRender</class>
+   <extends>QOpenGLWidget</extends>
+   <header>filerender.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

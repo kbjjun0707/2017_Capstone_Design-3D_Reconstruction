@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/proto01">
+        <file>Resources/3D scanner.png</file>
+    </qresource>
+</RCC>
